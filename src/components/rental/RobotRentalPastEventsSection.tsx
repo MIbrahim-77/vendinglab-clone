@@ -69,17 +69,40 @@ const events = [
   },
 ]
 
-const VISIBLE = 4
-const MAX_INDEX = events.length - VISIBLE
+function getVisibleItems(windowWidth: number): number {
+  if (windowWidth < 640) return 1
+  if (windowWidth < 1024) return 2
+  return 4
+}
+
+function getItemWidth(windowWidth: number): number {
+  const visible = getVisibleItems(windowWidth)
+  return 100 / visible
+}
 
 export default function RobotRentalPastEventsSection() {
   const [current, setCurrent] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(1200)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  const visibleItems = getVisibleItems(windowWidth)
+  const itemWidth = getItemWidth(windowWidth)
+  const maxIndex = Math.max(0, events.length - visibleItems)
+
+  useEffect(() => {
+    setWindowWidth(typeof window !== 'undefined' ? window.innerWidth : 1200)
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+      setCurrent(0)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const startAutoScroll = () => {
     stopAutoScroll()
     intervalRef.current = setInterval(() => {
-      setCurrent(prev => (prev >= MAX_INDEX ? 0 : prev + 1))
+      setCurrent(prev => (prev >= maxIndex ? 0 : prev + 1))
     }, 3500)
   }
 
@@ -90,17 +113,17 @@ export default function RobotRentalPastEventsSection() {
   useEffect(() => {
     startAutoScroll()
     return () => stopAutoScroll()
-  }, [])
+  }, [maxIndex])
 
   const handlePrev = () => {
     stopAutoScroll()
-    setCurrent(prev => (prev <= 0 ? MAX_INDEX : prev - 1))
+    setCurrent(prev => (prev <= 0 ? maxIndex : prev - 1))
     startAutoScroll()
   }
 
   const handleNext = () => {
     stopAutoScroll()
-    setCurrent(prev => (prev >= MAX_INDEX ? 0 : prev + 1))
+    setCurrent(prev => (prev >= maxIndex ? 0 : prev + 1))
     startAutoScroll()
   }
 
@@ -149,6 +172,7 @@ export default function RobotRentalPastEventsSection() {
         >
            <button
              onClick={handlePrev}
+             className="z-10 flex items-center justify-center"
              style={{
                position: 'absolute',
                top: '50%',
@@ -163,7 +187,6 @@ export default function RobotRentalPastEventsSection() {
                fontWeight: 700,
                color: '#333333',
                cursor: 'pointer',
-               zIndex: 10,
                boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
                display: 'flex',
                alignItems: 'center',
@@ -175,6 +198,7 @@ export default function RobotRentalPastEventsSection() {
 
            <button
              onClick={handleNext}
+             className="z-10 flex items-center justify-center"
              style={{
                position: 'absolute',
                top: '50%',
@@ -189,7 +213,6 @@ export default function RobotRentalPastEventsSection() {
                fontWeight: 700,
                color: '#333333',
                cursor: 'pointer',
-               zIndex: 10,
                boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
                display: 'flex',
                alignItems: 'center',
@@ -204,14 +227,14 @@ export default function RobotRentalPastEventsSection() {
               style={{
                 display: 'flex',
                 transition: 'transform 0.5s ease',
-                transform: `translateX(-${current * 25}%)`,
+                transform: `translateX(-${current * itemWidth}%)`,
               }}
             >
               {events.map((event, i) => (
                 <div
                   key={i}
                   style={{
-                    flex: '0 0 25%',
+                    flex: `0 0 ${itemWidth}%`,
                     paddingRight: '16px',
                     boxSizing: 'border-box',
                   }}
@@ -220,9 +243,9 @@ export default function RobotRentalPastEventsSection() {
                     src={event.image}
                     alt={event.title}
                     referrerPolicy="no-referrer"
+                    className="h-40 sm:h-48 lg:h-[220px]"
                     style={{
                       width: '100%',
-                      height: '220px',
                       objectFit: 'cover',
                       display: 'block',
                       borderRadius: '12px 12px 0 0',
@@ -250,6 +273,7 @@ export default function RobotRentalPastEventsSection() {
                       {event.title}
                     </h3>
                     <p
+                      className="hidden sm:block"
                       style={{
                         color: '#888888',
                         fontSize: '13px',
@@ -260,6 +284,7 @@ export default function RobotRentalPastEventsSection() {
                       {event.date}
                     </p>
                     <p
+                      className="hidden md:block"
                       style={{
                         color: '#555555',
                         fontSize: '13px',
@@ -271,8 +296,9 @@ export default function RobotRentalPastEventsSection() {
                       {event.description}
                     </p>
                     <div
+                      className="hidden lg:flex"
                       style={{
-                        display: 'flex',
+                        display: 'none',
                         justifyContent: 'center',
                         gap: '16px',
                       }}
