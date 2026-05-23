@@ -14,7 +14,7 @@ export default function IceCreamBestKioskSection() {
   const locale = useLocale()
 
   return (
-    <section className="bg-white py-16 px-6 text-center">
+    <section className="bg-white py-8 md:py-12 lg:py-16 px-4 md:px-6 text-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,11 +22,11 @@ export default function IceCreamBestKioskSection() {
         transition={{ duration: 0.6 }}
         className="max-w-5xl mx-auto"
       >
-        <h2 className="text-gray-900 font-bold text-4xl md:text-5xl max-w-4xl mx-auto leading-tight mb-6">
+        <h2 className="text-gray-900 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-4xl mx-auto leading-tight mb-4 md:mb-6">
           You have found the best Ice Cream Kiosk
         </h2>
 
-        <p className="text-gray-700 text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-10">
+        <p className="text-gray-700 text-sm md:text-base lg:text-lg max-w-3xl mx-auto leading-relaxed mb-6 md:mb-10">
           And when we use the term &ldquo;best,&rdquo; we absolutely mean it! This Ice cream kiosk
           stands out from all others in the world with its multitude of unique features. Here are a
           few of them, but you can refer to our complete article to discover the remaining{' '}
@@ -38,11 +38,11 @@ export default function IceCreamBestKioskSection() {
           </Link>
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto mb-6 md:mb-10">
           {features.map((text) => (
             <div
               key={text}
-              className="rounded-2xl py-8 px-6 text-center text-white font-semibold text-base leading-snug"
+              className="rounded-2xl py-4 md:py-6 lg:py-8 px-4 md:px-6 text-center text-white font-semibold text-sm md:text-base leading-snug"
               style={{
                 background: 'linear-gradient(135deg, #2d1f0e, #4a3020)',
                 border: '1px solid #c9a84c',

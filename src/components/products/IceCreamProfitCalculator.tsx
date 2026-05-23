@@ -68,12 +68,12 @@ export default function IceCreamProfitCalculator() {
   const monthlyProfit = monthlyRevenue - monthlyExpenses
 
   return (
-    <section className="bg-black py-20 px-8">
+    <section className="bg-black py-8 md:py-12 lg:py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white text-center mb-2 md:mb-4">
           Monthly CafeXbot Ice Cream Robot Profit Calculator
         </h2>
-        <p className="text-gray-400 text-base text-center mb-12">
+        <p className="text-gray-400 text-sm md:text-base text-center mb-6 md:mb-8 lg:mb-12">
           Estimate your potential earnings with our automated ice cream solution.
         </p>
 
@@ -158,13 +158,13 @@ export default function IceCreamProfitCalculator() {
           </div>
 
           {/* Right: Results Card */}
-          <div className="w-full lg:w-[35%] bg-gradient-to-b from-yellow-400 to-amber-500 rounded-2xl p-6 md:p-8 flex flex-col justify-between">
+          <div className="w-full lg:w-[35%] bg-gradient-to-b from-yellow-400 to-amber-500 rounded-2xl p-4 md:p-6 lg:p-8 flex flex-col justify-between">
             <div>
-              <h3 className="text-[#3d2000] font-bold text-xl mb-4">
+              <h3 className="text-[#3d2000] font-bold text-base md:text-lg lg:text-xl mb-2 md:mb-4">
                 Projected Monthly Gross Profit
               </h3>
               <p
-                className={`font-bold text-6xl mb-2 ${monthlyProfit < 0 ? 'text-red-600' : 'text-[#3d2000]'}`}
+                className={`font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-1 md:mb-2 ${monthlyProfit < 0 ? 'text-red-600' : 'text-[#3d2000]'}`}
               >
                 ${monthlyProfit.toLocaleString()}
               </p>

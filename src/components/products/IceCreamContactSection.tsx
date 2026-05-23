@@ -8,20 +8,20 @@ export default function IceCreamContactSection() {
   const locale = useLocale()
 
   return (
-    <section className="bg-slate-200 py-16 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    <section className="bg-slate-200 py-8 md:py-12 lg:py-16 px-4 md:px-8 overflow-hidden">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8">
         <motion.div
-          className="flex-1 max-w-lg text-center md:text-left"
+          className="flex-1 max-w-lg text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-gray-900 font-bold text-4xl md:text-5xl leading-tight mb-6">
+          <h2 className="text-gray-900 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 md:mb-6">
             Contact us and start earning in few months!
           </h2>
 
-          <p className="text-gray-600 text-base leading-relaxed max-w-sm mx-auto md:mx-0 mb-8">
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-sm mx-auto mb-6 md:mb-8">
             Existing ones are already making thousands daily for their owners. Check our Passive
             Income Opportunities if you want us to find a location and operate it for you.
           </p>

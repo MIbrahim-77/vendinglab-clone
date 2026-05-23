@@ -10,23 +10,23 @@ export default function IceCreamCustomizeSection() {
 
   return (
     <>
-      <section className="py-16 px-8 text-center" style={{ background: '#0f0d0a' }}>
+       <section className="py-8 md:py-12 lg:py-16 px-4 md:px-8 text-center" style={{ background: '#0f0d0a' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-white font-bold text-4xl md:text-5xl mb-12">
+          <h2 className="text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-6 md:mb-8 lg:mb-12">
             Customize Your CafeXbot Ice Cream Kiosk
           </h2>
 
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-1 text-center md:text-left max-w-md">
-              <p className="text-yellow-500 font-bold text-base md:text-lg leading-relaxed">
+          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8">
+            <div className="flex-1 text-center max-w-md order-2 lg:order-1">
+              <p className="text-yellow-500 font-bold text-sm md:text-base lg:text-lg leading-relaxed">
                 Choose from our range of CafeXbot Ice Cream kiosk designs to match your cafe&apos;s
                 style and branding.
-                <span className="text-white font-bold text-base md:text-lg leading-relaxed">
+                <span className="text-white font-bold text-sm md:text-base lg:text-lg leading-relaxed">
                   {' '}Customize your robot barista to fit with Franke A300 or Franke A600 coffee machines.
                 </span>
               </p>
@@ -73,9 +73,9 @@ export default function IceCreamCustomizeSection() {
         </motion.div>
       </section>
 
-      <div className="bg-slate-200 px-8 pt-0 pb-16">
+       <div className="bg-slate-200 px-4 md:px-8 pt-0 pb-8 md:pb-12 lg:pb-16">
         <motion.div
-          className="max-w-5xl mx-auto rounded-2xl py-12 px-8 text-center"
+          className="max-w-5xl mx-auto rounded-2xl py-6 md:py-8 lg:py-12 px-4 md:px-6 lg:px-8 text-center"
           style={{
             background: '#3d2c1e',
             border: '2px solid #c9a84c',
@@ -85,7 +85,7 @@ export default function IceCreamCustomizeSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-white font-bold text-3xl md:text-4xl max-w-2xl mx-auto leading-tight mb-8">
+          <h3 className="text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-2xl mx-auto leading-tight mb-4 md:mb-6 lg:mb-8">
             Request Our Brochure With Specifications And Details Of Our Ice Cream Robot
           </h3>
 

@@ -8,18 +8,18 @@ export default function IceCreamHowItWorksSection() {
   const [isPlaying, setIsPlaying] = useState(false)
 
   return (
-    <section className="bg-black py-16 px-6 text-center">
+    <section className="bg-black py-8 md:py-12 lg:py-16 px-4 md:px-6 text-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-white font-bold text-4xl md:text-5xl mb-6">
+        <h2 className="text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 md:mb-6">
           How Xbot Ice Cream Robot makes a cup of Ice Cream
         </h2>
 
-        <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-gray-300 text-sm md:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed mb-6 md:mb-8 lg:mb-10">
           It just takes 40 Seconds for an xbot to produce and serve an Ice Cream cup
         </p>
 

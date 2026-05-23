@@ -47,18 +47,18 @@ export default function IceCreamLocationsSection() {
 
   return (
     <>
-      <section className="bg-slate-200 py-16 px-8 text-center">
+       <section className="bg-slate-200 py-8 md:py-12 lg:py-16 px-4 md:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-[#2d2d2d] font-bold text-4xl mb-6">
+          <h2 className="text-[#2d2d2d] font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6">
             Prime Locations For Your Ice Cream Robot
           </h2>
 
-          <p className="text-gray-600 text-base text-center max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-sm md:text-base text-center max-w-2xl mx-auto leading-relaxed">
             CafeXbot is about practicality and entertainment, making it a great business in a
             location with lots of people. Moreover, your advantage is the ability to move your
             Ice Cream Robot overnight if you want to improve the location. Additionally, theme
@@ -68,7 +68,7 @@ export default function IceCreamLocationsSection() {
         </motion.div>
       </section>
 
-      <section className="bg-slate-200 py-12 px-4">
+      <section className="bg-slate-200 py-6 md:py-8 lg:py-12 px-2 md:px-4">
         <div className="relative max-w-7xl mx-auto">
           <button
             type="button"

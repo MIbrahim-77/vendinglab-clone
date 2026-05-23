@@ -93,8 +93,8 @@ export default function IceCreamFaqSection() {
   const [openChar, setOpenChar] = useState<number>(0)
 
   return (
-    <section className="bg-gray-100 py-16 px-6">
-      <h2 className="text-gray-900 font-bold text-4xl text-center mb-10">
+    <section className="bg-gray-100 py-8 md:py-12 lg:py-16 px-4 md:px-6">
+      <h2 className="text-gray-900 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8 lg:mb-10">
         Frequently Asked Questions
       </h2>
 
@@ -108,7 +108,7 @@ export default function IceCreamFaqSection() {
         />
       ))}
 
-      <h2 className="text-gray-900 font-bold text-4xl text-center mt-16 mb-10">
+      <h2 className="text-gray-900 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center mt-8 md:mt-12 lg:mt-16 mb-6 md:mb-8 lg:mb-10">
         CafeXbot Characteristics
       </h2>
 
