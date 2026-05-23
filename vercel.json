@@ -1,36 +1,4 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "regions": ["fra1"],
-  "env": {
-    "NEXT_PUBLIC_GRAPHQL_URL": {
-      "description": "WordPress WPGraphQL endpoint",
-      "value": "https://vendinglab.tech/graphql"
-    },
-    "NEXT_PUBLIC_SITE_URL": {
-      "description": "Public URL of the deployed frontend (no trailing slash)",
-      "value": "https://vendinglab.tech"
-    },
-    "NEXT_PUBLIC_INSTAGRAM_TOKEN": {
-      "description": "Instagram Basic Display API long-lived access token for @vlt.robotics"
-    },
-    "PAYLOAD_API_URL": {
-      "description": "Base URL of the Payload CMS backend, e.g. https://cms.vendinglab.tech"
-    },
-    "PAYLOAD_API_SECRET": {
-      "description": "Shared secret for authenticating server-to-server Payload API requests"
-    }
-  },
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
-      ]
-    }
-  ]
+  "regions": ["fra1"]
 }
