@@ -27,15 +27,15 @@ export default function RobotRentalExistingLocationsSection() {
   return (
     <section style={{ backgroundColor: '#f5f5f5' }} className="py-16 px-8">
       <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
-          className="text-gray-900 font-bold text-4xl text-center mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Our Existing Locations
-        </motion.h2>
+         <motion.h2
+           className="text-gray-900 font-bold text-3xl md:text-4xl text-center mb-4"
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6 }}
+         >
+           Our Existing Locations
+         </motion.h2>
 
         <motion.p
           className="text-base font-semibold text-center mb-10 max-w-4xl mx-auto"
@@ -52,43 +52,44 @@ export default function RobotRentalExistingLocationsSection() {
           </span>
         </motion.p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px', marginBottom: '32px' }}>
-          {locations.map((loc, index) => (
-            <motion.div
-              key={loc.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', height: '300px' }}
-            >
-              <img
-                src={loc.image}
-                alt={loc.alt}
-                referrerPolicy="no-referrer"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  padding: '24px 20px',
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.55), transparent)',
-                  color: 'white',
-                  fontWeight: 800,
-                  fontSize: '28px',
-                  textTransform: 'uppercase',
-                  lineHeight: 1.1,
-                  textAlign: 'left',
-                }}
-              >
-                {loc.label}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: '24px', marginBottom: '32px' }}>
+           {locations.map((loc, index) => (
+             <motion.div
+               key={loc.label}
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.5, delay: index * 0.15 }}
+               className="h-[240px] md:h-[280px] lg:h-[300px]"
+               style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden' }}
+             >
+               <img
+                 src={loc.image}
+                 alt={loc.alt}
+                 referrerPolicy="no-referrer"
+                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+               />
+               <div
+                 className="text-xl md:text-2xl lg:text-[28px]"
+                 style={{
+                   position: 'absolute',
+                   bottom: 0,
+                   left: 0,
+                   right: 0,
+                   padding: '24px 20px',
+                   background: 'linear-gradient(to top, rgba(0,0,0,0.55), transparent)',
+                   color: 'white',
+                   fontWeight: 800,
+                   textTransform: 'uppercase',
+                   lineHeight: 1.1,
+                   textAlign: 'left',
+                 }}
+               >
+                 {loc.label}
+               </div>
+             </motion.div>
+           ))}
+         </div>
 
         <motion.div
           initial={{ opacity: 0 }}

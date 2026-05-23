@@ -37,133 +37,134 @@ export default function RobotRentalProductVarietySection() {
     >
       <div className="max-w-7xl mx-auto">
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2
-            style={{
-              color: '#2d2d2d',
-              fontWeight: 800,
-              fontSize: '42px',
-              textAlign: 'center',
-              marginBottom: '16px',
-            }}
-          >
-            Exquisite Product Variety
-          </h2>
-          <p
-            style={{
-              color: '#555555',
-              fontSize: '16px',
-              textAlign: 'center',
-              marginBottom: '56px',
-            }}
-          >
-            Savor the essence of variety with our meticulously curated offerings
-          </p>
-        </motion.div>
+         <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6 }}
+         >
+           <h2
+             className="text-2xl md:text-3xl lg:text-4xl"
+             style={{
+               color: '#2d2d2d',
+               fontWeight: 800,
+               textAlign: 'center',
+               marginBottom: '16px',
+             }}
+           >
+             Exquisite Product Variety
+           </h2>
+           <p
+             style={{
+               color: '#555555',
+               fontSize: '16px',
+               textAlign: 'center',
+               marginBottom: '56px',
+             }}
+           >
+             Savor the essence of variety with our meticulously curated offerings
+           </p>
+         </motion.div>
 
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            gap: '48px',
-          }}
-        >
-          <motion.div
-            style={{ flex: '0 0 280px' }}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {menuItems.map((item, i) => (
-              <div
-                key={item}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '10px',
-                  paddingBottom: '20px',
-                  marginBottom: '20px',
-                  borderBottom: i < menuItems.length - 1
-                    ? '1px solid #cccccc'
-                    : 'none',
-                  cursor: 'pointer',
-                }}
-              >
-                <span
-                  style={{
-                    color: '#f5a623',
-                    fontSize: '20px',
-                    fontWeight: 700,
-                    lineHeight: 1,
-                  }}
-                >
-                  ›
-                </span>
-                <span
-                  style={{
-                    color: '#f5a623',
-                    fontWeight: 600,
-                    fontSize: '16px',
-                  }}
-                >
-                  {item}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+         <div
+           className="flex-col lg:flex-row"
+           style={{
+             display: 'flex',
+             alignItems: 'flex-start',
+             gap: '32px',
+           }}
+         >
+           <motion.div
+             className="w-full lg:w-auto"
+             style={{ flex: '0 0 auto' }}
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.6 }}
+           >
+              <div className="flex flex-wrap lg:flex-col gap-3 lg:gap-0 justify-center lg:justify-start">
+              {menuItems.map((item, i) => (
+               <div
+                 key={item}
+                 className={`px-3 py-2 lg:px-0 lg:py-4 ${i < menuItems.length - 1 ? 'lg:border-b lg:border-b-gray-300 lg:mb-5' : ''}`}
+                 style={{
+                   display: 'inline-flex',
+                   alignItems: 'center',
+                   gap: '10px',
+                   cursor: 'pointer',
+                   marginBottom: '0',
+                   paddingBottom: '0',
+                 }}
+               >
+                 <span
+                   style={{
+                     color: '#f5a623',
+                     fontSize: '20px',
+                     fontWeight: 700,
+                     lineHeight: 1,
+                   }}
+                 >
+                   ›
+                 </span>
+                 <span
+                   style={{
+                     color: '#f5a623',
+                     fontWeight: 600,
+                     fontSize: '14px',
+                   }}
+                 >
+                   {item}
+                 </span>
+               </div>
+             ))}
+             </div>
+           </motion.div>
 
-          <motion.div
-            style={{ flex: 1 }}
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div
-              style={{
-                backgroundColor: '#5c4a32',
-                borderRadius: '20px',
-                padding: '32px 24px',
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr 1fr',
-                gap: '16px',
-              }}
-            >
-              {products.map((product, i) => (
-                <motion.div
-                  key={product.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  style={{
-                    backgroundColor: 'rgba(255,255,255,0.08)',
-                    borderRadius: '14px',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                    padding: '24px 16px',
-                    textAlign: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                  }}
-                >
-                  <img
-                    src={product.image}
-                    alt={product.alt}
-                    referrerPolicy="no-referrer"
-                    style={{
-                      width: '120px',
-                      height: '120px',
-                      objectFit: 'contain',
-                      marginBottom: '20px',
-                    }}
-                  />
+           <motion.div
+             className="w-full"
+             style={{ flex: 1 }}
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.6 }}
+           >
+             <div
+               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+               style={{
+                 backgroundColor: '#5c4a32',
+                 borderRadius: '20px',
+                 padding: '32px 24px',
+                 gap: '16px',
+               }}
+             >
+               {products.map((product, i) => (
+                 <motion.div
+                   key={product.title}
+                   initial={{ opacity: 0, y: 20 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true }}
+                   transition={{ duration: 0.5, delay: i * 0.15 }}
+                   style={{
+                     backgroundColor: 'rgba(255,255,255,0.08)',
+                     borderRadius: '14px',
+                     border: '1px solid rgba(255,255,255,0.15)',
+                     padding: '24px 16px',
+                     textAlign: 'center',
+                     display: 'flex',
+                     flexDirection: 'column',
+                     alignItems: 'center',
+                   }}
+                 >
+                   <img
+                     src={product.image}
+                     alt={product.alt}
+                     referrerPolicy="no-referrer"
+                     className="w-20 h-20 md:w-24 md:h-24"
+                     style={{
+                       objectFit: 'contain',
+                       marginBottom: '20px',
+                     }}
+                   />
                   <h3
                     style={{
                       color: '#f5a623',

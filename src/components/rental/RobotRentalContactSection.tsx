@@ -70,48 +70,49 @@ export default function RobotRentalContactSection() {
 
   return (
     <>
-      <section
-        style={{
-          position: 'relative',
-          backgroundImage: "url('https://res.cloudinary.com/drqisyk9h/image/upload/q_auto/f_auto/v1779357416/Latte-bot-1024x739_fn0qco.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          padding: '80px 32px',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundColor: 'rgba(20, 40, 20, 0.78)',
-            zIndex: 1,
-          }}
-        />
+       <section
+         className="py-12 md:py-16 lg:py-20"
+         style={{
+           position: 'relative',
+           backgroundImage: "url('https://res.cloudinary.com/drqisyk9h/image/upload/q_auto/f_auto/v1779357416/Latte-bot-1024x739_fn0qco.webp')",
+           backgroundSize: 'cover',
+           backgroundPosition: 'center',
+         }}
+       >
+         <div
+           style={{
+             position: 'absolute',
+             inset: 0,
+             backgroundColor: 'rgba(20, 40, 20, 0.78)',
+             zIndex: 1,
+           }}
+         />
 
-        <motion.div
-          style={{
-            position: 'relative',
-            zIndex: 2,
-            maxWidth: '900px',
-            margin: '0 auto',
-            textAlign: 'center',
-          }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <h2
-            style={{
-              color: '#ffffff',
-              fontWeight: 800,
-              fontSize: '38px',
-              lineHeight: 1.2,
-              marginBottom: '24px',
-            }}
-          >
-            Contact Us For Your Robot Rental Needs in Dubai and UAE
-          </h2>
+         <motion.div
+           className="px-4"
+           style={{
+             position: 'relative',
+             zIndex: 2,
+             maxWidth: '900px',
+             margin: '0 auto',
+             textAlign: 'center',
+           }}
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.7 }}
+         >
+           <h2
+             className="text-2xl md:text-3xl lg:text-4xl"
+             style={{
+               color: '#ffffff',
+               fontWeight: 800,
+               lineHeight: 1.2,
+               marginBottom: '24px',
+             }}
+           >
+             Contact Us For Your Robot Rental Needs in Dubai and UAE
+           </h2>
 
           <p
             style={{
@@ -234,71 +235,71 @@ export default function RobotRentalContactSection() {
         </motion.div>
       </section>
 
-      <section
-        style={{
-          backgroundColor: '#4a3f35',
-          padding: '40px 32px',
-          textAlign: 'center',
-        }}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <p
-            style={{
-              color: '#ffffff',
-              fontWeight: 800,
-              fontSize: '16px',
-              letterSpacing: '0.1em',
-              marginBottom: '24px',
-              textTransform: 'uppercase',
-            }}
-          >
-            VISIT US ON SOCIAL MEDIA
-          </p>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: '16px',
-              flexWrap: 'wrap',
-            }}
-          >
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                style={{
-                  width: '56px',
-                  height: '56px',
-                  borderRadius: '12px',
-                  backgroundColor: '#f5a623',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  transition: 'opacity 0.2s',
-                  textDecoration: 'none',
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.opacity = '0.85'
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLElement).style.opacity = '1'
-                }}
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+       <section
+         className="py-8 md:py-10"
+         style={{
+           backgroundColor: '#4a3f35',
+           textAlign: 'center',
+         }}
+       >
+         <motion.div
+           className="px-4"
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.5 }}
+         >
+           <p
+             style={{
+               color: '#ffffff',
+               fontWeight: 800,
+               fontSize: '16px',
+               letterSpacing: '0.1em',
+               marginBottom: '24px',
+               textTransform: 'uppercase',
+             }}
+           >
+             VISIT US ON SOCIAL MEDIA
+           </p>
+           <div
+             style={{
+               display: 'flex',
+               justifyContent: 'center',
+               gap: '12px',
+               flexWrap: 'wrap',
+             }}
+           >
+             {socialLinks.map((social) => (
+               <a
+                 key={social.label}
+                 href={social.href}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label={social.label}
+                 className="w-12 h-12 md:w-14 md:h-14"
+                 style={{
+                   borderRadius: '12px',
+                   backgroundColor: '#f5a623',
+                   display: 'flex',
+                   alignItems: 'center',
+                   justifyContent: 'center',
+                   cursor: 'pointer',
+                   transition: 'opacity 0.2s',
+                   textDecoration: 'none',
+                 }}
+                 onMouseEnter={e => {
+                   (e.currentTarget as HTMLElement).style.opacity = '0.85'
+                 }}
+                 onMouseLeave={e => {
+                   (e.currentTarget as HTMLElement).style.opacity = '1'
+                 }}
+               >
+                 {social.icon}
+               </a>
+             ))}
+           </div>
+         </motion.div>
+       </section>
     </>
   )
 }

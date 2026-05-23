@@ -57,44 +57,46 @@ export default function RobotRentalModelsSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto" style={{ display: 'flex', alignItems: 'center', gap: '80px' }}>
-        <motion.div
-          style={{ flex: 1 }}
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 style={{ color: '#ffffff', fontWeight: 700, fontSize: '42px', lineHeight: 1.2, marginBottom: '40px' }}>
-            Which Robot Cafe Would You Like To Rent?
-          </h2>
-          <p style={{ color: '#cccccc', fontWeight: 400, fontSize: '16px', lineHeight: 1.7, maxWidth: '380px' }}>
-            Each robotic cafe comes fully stocked with Ice Cream and Coffee that you can serve for Free or sell to your event visitors
-          </p>
-        </motion.div>
+       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row" style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
+         <motion.div
+           className="w-full lg:flex-1 text-center lg:text-left"
+           style={{ flex: 1 }}
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6 }}
+         >
+           <h2 className="text-2xl md:text-3xl lg:text-4xl" style={{ color: '#ffffff', fontWeight: 700, lineHeight: 1.2, marginBottom: '24px' }}>
+             Which Robot Cafe Would You Like To Rent?
+           </h2>
+           <p style={{ color: '#cccccc', fontWeight: 400, fontSize: '16px', lineHeight: 1.7, maxWidth: '100%' }}>
+             Each robotic cafe comes fully stocked with Ice Cream and Coffee that you can serve for Free or sell to your event visitors
+           </p>
+         </motion.div>
 
-        <motion.div
-          style={{ flex: 1, position: 'relative', textAlign: 'center' }}
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          onMouseEnter={stopAutoScroll}
-          onMouseLeave={startAutoScroll}
-        >
-          <img
-            src={models[current].image}
-            alt={models[current].name}
-            referrerPolicy="no-referrer"
-            style={{
-              width: '100%',
-              height: '380px',
-              objectFit: 'contain',
-              display: 'block',
-              opacity: fade ? 1 : 0,
-              transition: 'opacity 0.3s ease',
-            }}
-          />
+         <motion.div
+           className="w-full lg:flex-1"
+           style={{ flex: 1, position: 'relative', textAlign: 'center' }}
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6 }}
+           onMouseEnter={stopAutoScroll}
+           onMouseLeave={startAutoScroll}
+         >
+           <img
+             src={models[current].image}
+             alt={models[current].name}
+             referrerPolicy="no-referrer"
+             className="h-[280px] md:h-[320px] lg:h-[380px]"
+             style={{
+               width: '100%',
+               objectFit: 'contain',
+               display: 'block',
+               opacity: fade ? 1 : 0,
+               transition: 'opacity 0.3s ease',
+             }}
+           />
 
           <p style={{ color: '#cccccc', fontSize: '16px', fontWeight: 400, marginTop: '20px', textAlign: 'center', letterSpacing: '0.05em' }}>
             {models[current].name}

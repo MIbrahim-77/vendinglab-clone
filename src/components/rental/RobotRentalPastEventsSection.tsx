@@ -111,91 +111,93 @@ export default function RobotRentalPastEventsSection() {
     >
       <div className="max-w-7xl mx-auto">
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2
-            style={{
-              color: '#ffffff',
-              fontWeight: 800,
-              fontSize: '40px',
-              textAlign: 'center',
-              marginBottom: '16px',
-            }}
-          >
-            Past CafeXbot Robot Rental Events In Dubai &amp; UAE
-          </h2>
-          <p
-            style={{
-              color: '#cccccc',
-              fontSize: '16px',
-              textAlign: 'center',
-              maxWidth: '700px',
-              margin: '0 auto 48px auto',
-            }}
-          >
-            Big thanks to our past robot rental event clients in Dubai and UAE!
-            We love you as much as you love our Ice Cream &amp; Coffee!
-          </p>
-        </motion.div>
+         <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6 }}
+         >
+           <h2
+             className="text-2xl md:text-3xl lg:text-4xl"
+             style={{
+               color: '#ffffff',
+               fontWeight: 800,
+               textAlign: 'center',
+               marginBottom: '16px',
+             }}
+           >
+             Past CafeXbot Robot Rental Events In Dubai &amp; UAE
+           </h2>
+           <p
+             style={{
+               color: '#cccccc',
+               fontSize: '16px',
+               textAlign: 'center',
+               maxWidth: '700px',
+               margin: '0 auto 48px auto',
+             }}
+           >
+             Big thanks to our past robot rental event clients in Dubai and UAE!
+             We love you as much as you love our Ice Cream &amp; Coffee!
+           </p>
+         </motion.div>
 
         <div
           style={{ position: 'relative' }}
           onMouseEnter={stopAutoScroll}
           onMouseLeave={startAutoScroll}
         >
-          <button
-            onClick={handlePrev}
-            style={{
-              position: 'absolute',
-              top: '110px',
-              left: '-20px',
-              width: '44px',
-              height: '44px',
-              borderRadius: '50%',
-              backgroundColor: '#ffffff',
-              border: 'none',
-              fontSize: '22px',
-              fontWeight: 700,
-              color: '#333333',
-              cursor: 'pointer',
-              zIndex: 10,
-              boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            ‹
-          </button>
+           <button
+             onClick={handlePrev}
+             style={{
+               position: 'absolute',
+               top: '50%',
+               transform: 'translateY(-50%)',
+               left: '-10px',
+               width: '36px',
+               height: '36px',
+               borderRadius: '50%',
+               backgroundColor: '#ffffff',
+               border: 'none',
+               fontSize: '18px',
+               fontWeight: 700,
+               color: '#333333',
+               cursor: 'pointer',
+               zIndex: 10,
+               boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+               display: 'flex',
+               alignItems: 'center',
+               justifyContent: 'center',
+             }}
+           >
+             ‹
+           </button>
 
-          <button
-            onClick={handleNext}
-            style={{
-              position: 'absolute',
-              top: '110px',
-              right: '-20px',
-              width: '44px',
-              height: '44px',
-              borderRadius: '50%',
-              backgroundColor: '#ffffff',
-              border: 'none',
-              fontSize: '22px',
-              fontWeight: 700,
-              color: '#333333',
-              cursor: 'pointer',
-              zIndex: 10,
-              boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            ›
-          </button>
+           <button
+             onClick={handleNext}
+             style={{
+               position: 'absolute',
+               top: '50%',
+               transform: 'translateY(-50%)',
+               right: '-10px',
+               width: '36px',
+               height: '36px',
+               borderRadius: '50%',
+               backgroundColor: '#ffffff',
+               border: 'none',
+               fontSize: '18px',
+               fontWeight: 700,
+               color: '#333333',
+               cursor: 'pointer',
+               zIndex: 10,
+               boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+               display: 'flex',
+               alignItems: 'center',
+               justifyContent: 'center',
+             }}
+           >
+             ›
+           </button>
 
           <div style={{ overflow: 'hidden' }}>
             <div
