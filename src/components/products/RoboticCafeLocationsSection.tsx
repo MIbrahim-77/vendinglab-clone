@@ -54,7 +54,7 @@ export default function RoboticCafeLocationsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-[#2d2d2d] font-bold text-4xl mb-6">
+          <h2 className="text-[#2d2d2d] font-bold text-3xl md:text-4xl mb-6">
             Most Profitable Locations For Your Robotic Cafe
           </h2>
 

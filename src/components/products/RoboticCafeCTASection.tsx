@@ -9,15 +9,15 @@ export default function RoboticCafeCTASection() {
 
   return (
     <section className="bg-gray-100 py-20 px-8">
-      <div className="max-w-6xl mx-auto flex items-center gap-16">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         <motion.div
-          className="flex-1 flex flex-col items-start"
-          initial={{ x: -40, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-[#2d2d2d] font-bold text-4xl leading-tight mb-6">
+          <h2 className="text-[#2d2d2d] font-bold text-3xl md:text-4xl lg:text-4xl leading-tight mb-6">
             Robotic Cafe Business That Makes &gt;100% ROI For It&apos;s Owners
           </h2>
 
@@ -39,9 +39,9 @@ export default function RoboticCafeCTASection() {
         </motion.div>
 
         <motion.div
-          className="flex-1 flex justify-center"
-          initial={{ x: 40, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          className="flex-1 flex justify-center w-full max-w-sm lg:max-w-full"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -49,7 +49,7 @@ export default function RoboticCafeCTASection() {
           <img
             src="https://res.cloudinary.com/drqisyk9h/image/upload/q_auto/f_auto/v1779357302/Xbot-Robotic-cafes_yayr8v.webp"
             alt="CafeXbot Robotic Cafe Models"
-            className="w-full h-auto object-contain max-h-96"
+            className="w-full h-auto object-contain max-h-64 md:max-h-80 lg:max-h-96"
             referrerPolicy="no-referrer"
           />
         </motion.div>

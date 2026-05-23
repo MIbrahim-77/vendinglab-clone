@@ -10,13 +10,13 @@ export default function RoboticCafeDistributorsSection() {
   return (
     <section className="bg-gray-100 py-20 px-8">
       <motion.div
-        className="w-[70%] mx-auto bg-stone-800 border-2 border-yellow-600 rounded-2xl py-14 px-16 text-center"
+        className="w-full max-w-4xl mx-auto bg-stone-800 border-2 border-yellow-600 rounded-2xl py-10 md:py-14 px-6 md:px-16 text-center"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-white font-bold text-4xl mb-6">
+        <h2 className="text-white font-bold text-3xl md:text-4xl mb-6">
           Our Distributors Worldwide
         </h2>
 
