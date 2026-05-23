@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 export default function MaximizeReturnsSection() {
   return (
     <section style={{ backgroundColor: '#e8e9ed' }} className="py-16 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         <motion.div
-          className="flex-shrink-0"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-shrink-0 w-full max-w-md lg:max-w-[520px]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -18,15 +18,15 @@ export default function MaximizeReturnsSection() {
             alt="CafeXbot Robotic Cafe in Mall"
             width={520}
             height={480}
-            className="object-cover"
-            style={{ borderRadius: '20px' }}
+            className="object-cover w-full h-auto"
+            style={{ borderRadius: '20px', width: '100%', height: 'auto' }}
           />
         </motion.div>
 
         <motion.div
-          className="flex-1 max-w-lg"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-1 max-w-lg text-center lg:text-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >

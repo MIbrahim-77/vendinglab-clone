@@ -42,17 +42,18 @@ export default function AchieveEffortlessPassiveSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
+        className="px-6 md:px-12"
         style={{
           backgroundColor: '#3d3428',
           borderRadius: '20px',
-          padding: '40px 48px',
+          padding: '40px 24px',
         }}
       >
         <h2 className="font-bold text-xl md:text-2xl uppercase tracking-wide mb-8" style={{ color: '#f5a623' }}>
           ACHIEVE EFFORTLESS PASSIVE INCOME: INVEST &amp; REST WITH CAFEXBOT
         </h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px 48px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '16px 48px' }}>
           {steps.map((step, index) => (
             <StepItem key={index} number={index + 1} text={step} />
           ))}

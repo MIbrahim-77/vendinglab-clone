@@ -28,7 +28,7 @@ export default function ExistingLocationsSection() {
     <section style={{ backgroundColor: '#f5f5f5' }} className="py-16 px-8">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
-          className="text-gray-900 font-bold text-4xl text-center mb-4"
+          className="text-gray-900 font-bold text-3xl md:text-4xl text-center mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -52,7 +52,7 @@ export default function ExistingLocationsSection() {
           </span>
         </motion.p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px', marginBottom: '32px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: '24px', marginBottom: '32px' }}>
           {locations.map((loc, index) => (
             <motion.div
               key={loc.label}
@@ -60,7 +60,8 @@ export default function ExistingLocationsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', height: '300px' }}
+              style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', height: '240px' }}
+              className="md:h-[280px] lg:h-[300px]"
             >
               <img
                 src={loc.image}
@@ -69,6 +70,7 @@ export default function ExistingLocationsSection() {
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
               <div
+                className="text-xl md:text-2xl lg:text-[28px]"
                 style={{
                   position: 'absolute',
                   bottom: 0,
@@ -78,7 +80,6 @@ export default function ExistingLocationsSection() {
                   background: 'linear-gradient(to top, rgba(0,0,0,0.55), transparent)',
                   color: 'white',
                   fontWeight: 800,
-                  fontSize: '28px',
                   textTransform: 'uppercase',
                   lineHeight: 1.1,
                   textAlign: 'left',

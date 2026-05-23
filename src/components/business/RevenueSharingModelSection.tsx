@@ -114,7 +114,7 @@ export default function RevenueSharingModelSection() {
           80/20 Revenue Sharing Model for Passive Income with CafeXbot
         </motion.h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px 32px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '48px 32px' }}>
           {cards.map((card, index) => (
             <StepCard key={card.number} card={card} index={index} />
           ))}

@@ -45,7 +45,7 @@ export default function PassiveIncomeModelsSection() {
           </p>
         </motion.div>
 
-        <div className="flex flex-row items-stretch justify-center gap-6">
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-6">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
@@ -64,9 +64,10 @@ export default function PassiveIncomeModelsSection() {
                 boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
                 flex: 1,
                 maxWidth: '380px',
+                width: '100%',
               }}
             >
-              <div className="relative w-full mb-6" style={{ height: '240px' }}>
+              <div className="relative w-full mb-6" style={{ height: '200px' }}>
                 <Image src={product.src} alt={product.name} fill className="object-contain object-center" />
               </div>
               <p className="text-gray-800 font-bold text-lg text-center mb-3">{product.name}</p>
