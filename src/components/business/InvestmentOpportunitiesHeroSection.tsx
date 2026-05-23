@@ -5,12 +5,12 @@ import { motion } from 'framer-motion'
 export default function InvestmentOpportunitiesHeroSection() {
   return (
     <section style={{ backgroundColor: '#dde0e8' }} className="py-16 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
 
         <motion.div
-          className="flex-shrink-0 w-[420px] md:w-[480px]"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-shrink-0 w-full max-w-md md:max-w-[420px] lg:max-w-[480px]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -25,9 +25,9 @@ export default function InvestmentOpportunitiesHeroSection() {
         </motion.div>
 
         <motion.div
-          className="flex-1 max-w-lg"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-1 max-w-lg text-center lg:text-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -40,7 +40,7 @@ export default function InvestmentOpportunitiesHeroSection() {
             </div>
           </h2>
 
-          <p className="text-base leading-relaxed max-w-sm">
+          <p className="text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
             <span className="text-gray-700 font-semibold">
               Discover great investment opportunities &amp; ideas in robotic food tech. Moreover, this Robot Cafe brings{' '}
             </span>

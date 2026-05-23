@@ -222,34 +222,38 @@ function Phone2() {
 export default function MonitorRoboticCafesSection() {
   return (
     <section style={{ backgroundColor: '#0a0a0a' }} className="py-20 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         <motion.div
-          className="flex-shrink-0 max-w-lg"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-shrink-0 max-w-lg w-full text-center lg:text-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-bold text-4xl md:text-5xl leading-tight mb-10">
+          <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl leading-tight mb-6 lg:mb-10">
             <div className="text-white">Monitor Multiple Robotic Cafes</div>
             <div style={{ color: '#f5a623' }}>With CafeXbots</div>
             <div style={{ color: '#f5a623' }}>Mobile App</div>
           </h2>
 
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md mt-6">
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md mt-6 mx-auto lg:mx-0">
             See your investment opportunities delivering results through live sales reports. Track all sales levels for each Xbot on a single mobile screen with ease.
           </p>
         </motion.div>
 
         <motion.div
-          className="flex-1 flex flex-row items-center justify-center gap-6"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-1 flex flex-row items-center justify-center gap-4 lg:gap-6 w-full"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Phone1 />
-          <Phone2 />
+          <div style={{ transform: 'scale(0.8)', transformOrigin: 'center' }} className="lg:transform-none">
+            <Phone1 />
+          </div>
+          <div style={{ transform: 'scale(0.8)', transformOrigin: 'center' }} className="lg:transform-none">
+            <Phone2 />
+          </div>
         </motion.div>
       </div>
     </section>

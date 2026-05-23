@@ -28,8 +28,8 @@ export default function HowBusinessOpportunitiesWorkSection() {
           How Our Business Opportunities Work?
         </h2>
 
-        <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
-          <div className="flex-1 max-w-lg flex flex-col">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+          <div className="flex-1 max-w-lg flex flex-col w-full order-2 lg:order-1">
             {steps.map((step, i) => (
               <div
                 key={step}
@@ -46,13 +46,14 @@ export default function HowBusinessOpportunitiesWorkSection() {
             ))}
           </div>
 
-          <div className="flex-shrink-0 flex items-center justify-center">
+          <div className="flex-shrink-0 flex items-center justify-center w-full max-w-sm lg:max-w-full order-1 lg:order-2">
             <Image
               src="https://res.cloudinary.com/drqisyk9h/image/upload/q_auto/f_auto/v1779357416/Latte-bot-1024x739_fn0qco.webp"
               alt="CafeXbot Robotic Cafe"
               width={480}
               height={380}
-              className="object-contain"
+              className="object-contain w-full max-w-[320px] lg:max-w-[480px] h-auto"
+              style={{ width: '100%', height: 'auto', maxWidth: '480px' }}
             />
           </div>
         </div>

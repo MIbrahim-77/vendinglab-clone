@@ -42,15 +42,15 @@ export default function WherePlaceCafeSection() {
 
   return (
     <section style={{ backgroundColor: '#dde0e8' }} className="py-16 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         <motion.div
-          className="flex-shrink-0 max-w-sm"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-shrink-0 max-w-lg w-full text-center lg:text-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-yellow-500 font-bold text-3xl md:text-4xl leading-tight mb-6">
+          <h2 className="text-yellow-500 font-bold text-2xl md:text-3xl lg:text-4xl leading-tight mb-6">
             Where Do We Place Your Cafe For The Best Business Opportunities?
           </h2>
 
@@ -59,9 +59,9 @@ export default function WherePlaceCafeSection() {
           </p>
         </motion.div>
 
-        <div className="flex-1 max-w-lg">
+        <div className="flex-1 max-w-lg w-full">
           <div className="relative w-full">
-            <div className="rounded-2xl overflow-hidden relative w-full" style={{ height: '320px' }}>
+            <div className="rounded-2xl overflow-hidden relative w-full" style={{ height: '240px' }}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}

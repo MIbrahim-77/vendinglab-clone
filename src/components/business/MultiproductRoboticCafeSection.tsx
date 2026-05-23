@@ -64,8 +64,8 @@ export default function MultiproductRoboticCafeSection() {
           </span>
         </p>
 
-        <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
-          <div className="flex flex-col gap-10 flex-shrink-0 max-w-xs">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="flex flex-col gap-10 flex-shrink-0 max-w-xs w-full">
             {bulletPoints.map((point) => (
               <div key={point} className="flex flex-row items-center gap-3">
                 <span className="text-gray-900 font-bold text-base whitespace-nowrap">{point}</span>
@@ -75,34 +75,34 @@ export default function MultiproductRoboticCafeSection() {
             ))}
           </div>
 
-          <div style={{ backgroundColor: '#4a3f35' }} className="rounded-2xl p-8 flex-1">
-            <div className="grid grid-cols-4 gap-4 mb-4">
+          <div style={{ backgroundColor: '#4a3f35' }} className="rounded-2xl p-6 md:p-8 flex-1 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
               {row1.map((item) => (
                 <div key={item.label} className="flex flex-col items-center gap-2">
                   <div
-                    className="w-24 h-24 rounded-full flex items-center justify-center overflow-hidden"
+                    className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center overflow-hidden"
                     style={{
                       background: 'radial-gradient(circle, #5a5048 0%, #3a3028 100%)',
                       border: '1px solid rgba(255,255,255,0.15)',
                     }}
                   >
-                    <Image src={item.src} alt={item.label} width={70} height={70} className="object-contain" />
+                    <Image src={item.src} alt={item.label} width={70} height={70} className="object-contain w-12 h-12 md:w-auto md:h-auto" />
                   </div>
                   <span className="text-white text-xs font-semibold text-center">{item.label}</span>
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-3 gap-4 justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center">
               {row2.map((item) => (
                 <div key={item.label} className="flex flex-col items-center gap-2">
                   <div
-                    className="w-24 h-24 rounded-full flex items-center justify-center overflow-hidden"
+                    className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center overflow-hidden"
                     style={{
                       background: 'radial-gradient(circle, #5a5048 0%, #3a3028 100%)',
                       border: '1px solid rgba(255,255,255,0.15)',
                     }}
                   >
-                    <Image src={item.src} alt={item.label} width={70} height={70} className="object-contain" />
+                    <Image src={item.src} alt={item.label} width={70} height={70} className="object-contain w-12 h-12 md:w-auto md:h-auto" />
                   </div>
                   <span className="text-white text-xs font-semibold text-center">{item.label}</span>
                 </div>

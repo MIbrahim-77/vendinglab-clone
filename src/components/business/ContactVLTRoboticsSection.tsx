@@ -9,15 +9,15 @@ export default function ContactVLTRoboticsSection() {
 
   return (
     <section style={{ backgroundColor: '#dde0e8' }} className="relative overflow-hidden py-16 px-8">
-      <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         <motion.div
-          className="flex-shrink-0 max-w-lg"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-shrink-0 max-w-lg w-full text-center lg:text-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-bold text-2xl md:text-3xl leading-snug mb-8">
+          <p className="font-bold text-xl md:text-2xl lg:text-3xl leading-snug mb-8">
             <span className="text-gray-900">
               Contact our team to discuss how your business ideas can come together{' '}
             </span>
@@ -57,9 +57,9 @@ export default function ContactVLTRoboticsSection() {
         </motion.div>
 
         <motion.div
-          className="flex-shrink-0"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-shrink-0 w-full flex justify-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
@@ -68,7 +68,8 @@ export default function ContactVLTRoboticsSection() {
             alt="VLT Robotics Business Team"
             width={420}
             height={480}
-            className="object-contain object-bottom"
+            className="object-contain object-bottom w-full max-w-[280px] md:max-w-[360px] lg:max-w-[420px] h-auto"
+            style={{ width: '100%', height: 'auto', maxWidth: '420px' }}
           />
         </motion.div>
       </div>
