@@ -52,7 +52,7 @@ export default function CoffeeRobotFeaturesSection() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeInLeft}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center order-2 lg:order-none"
           >
             {leftFeatures.map((feature, i) => (
               <div key={i} className="flex items-center lg:justify-end gap-3 mb-10 last:mb-0">
@@ -68,7 +68,7 @@ export default function CoffeeRobotFeaturesSection() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeInScale}
-            className="flex justify-center"
+            className="flex justify-center order-1 lg:order-none"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -85,7 +85,7 @@ export default function CoffeeRobotFeaturesSection() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeInRight}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center order-3 lg:order-none"
           >
             {rightFeatures.map((feature, i) => (
               <div key={i} className="flex items-center gap-3 mb-10 last:mb-0">

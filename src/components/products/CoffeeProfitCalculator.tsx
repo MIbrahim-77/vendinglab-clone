@@ -70,7 +70,7 @@ export default function CoffeeProfitCalculator() {
   return (
     <section className="bg-black py-20 px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl font-bold text-white text-center mb-4">
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white text-center mb-4">
           Monthly CafeXbot Coffee Robot Profit Calculator
         </h2>
         <p className="text-gray-400 text-base text-center mb-12">

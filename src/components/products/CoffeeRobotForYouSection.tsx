@@ -125,7 +125,7 @@ export default function CoffeeRobotForYouSection() {
 
       {/* Part 3: Next section heading */}
       <div className="bg-white py-8 text-center">
-        <h3 className="text-3xl font-bold text-[#2d2d2d]">
+        <h3 className="text-2xl sm:text-3xl font-bold text-[#2d2d2d]">
           Average Profitability of Robotic Coffee Cup
         </h3>
       </div>

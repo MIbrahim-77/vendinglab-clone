@@ -38,7 +38,7 @@ export default function CoffeeProfitSection() {
           transition={{ duration: 0.6 }}
           className="w-full lg:w-[55%]"
         >
-          <h3 className="font-semibold text-lg text-gray-700 mb-6 border-l-4 border-gray-500 pl-3">
+          <h3 className="font-semibold text-base sm:text-lg text-gray-700 mb-6 border-l-4 border-gray-500 pl-3">
             Robotic Coffee Cup Profit Calculation
           </h3>
 
@@ -97,7 +97,7 @@ export default function CoffeeProfitSection() {
             src={BIG_CUP_URL}
             alt="Coffee cup"
             referrerPolicy="no-referrer"
-            className="w-80 h-80 object-contain mx-auto"
+            className="w-48 sm:w-64 lg:w-80 h-48 sm:h-64 lg:h-80 object-contain mx-auto"
           />
           {beanPositions.map((pos, i) => (
             <img

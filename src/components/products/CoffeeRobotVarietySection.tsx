@@ -29,7 +29,7 @@ export default function CoffeeRobotVarietySection() {
           variants={fadeInLeft}
           className="flex-1"
         >
-          <h2 className="text-4xl font-bold text-[#2d2d2d] mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2d2d2d] mb-4">
             Coffee Robot Product Variety
           </h2>
 
