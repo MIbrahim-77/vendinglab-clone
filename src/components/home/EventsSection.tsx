@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { LightboxViewer, type LightboxSlide } from '@/components/ui/LightboxGallery';
 import { VideoModal } from '@/components/ui/VideoPopup';
@@ -98,7 +98,25 @@ const ALL_EVENTS: EventItem[] = [
   { id: '38', title: 'Tomorrow Conference, Dubai',                 date: '08-10 February 2023',      description: "CafeXbot Debuted in Tomorrow Conference in Dubai. Where else? We couldn't have asked for a better debut than this.",                                    coverImage: FALLBACK,       galleryImages: [], videoUrl: '' },
 ];
 
-const CARDS_PER_PAGE = 4;
+// ─── Responsive hook ──────────────────────────────────────────────────────────
+
+function useCardsPerPage(): number {
+  const [cards, setCards] = useState(4);
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      if (w < 640) setCards(1);
+      else if (w < 1024) setCards(2);
+      else setCards(4);
+    };
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  return cards;
+}
 
 // ─── Arrow buttons ────────────────────────────────────────────────────────────
 
@@ -116,8 +134,9 @@ function ArrowButton({
       onClick={onClick}
       disabled={disabled}
       aria-label={direction === 'left' ? 'Previous events' : 'Next events'}
-      className="absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center transition-opacity duration-200 disabled:opacity-30 hover:bg-gray-100"
-      style={{ [direction === 'left' ? 'left' : 'right']: '-20px' }}
+      className={`absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center transition-opacity duration-200 disabled:opacity-30 hover:bg-gray-100 ${
+        direction === 'left' ? '-left-3 sm:-left-5' : '-right-3 sm:-right-5'
+      }`}
     >
       {direction === 'left' ? (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-gray-800" aria-hidden="true">
@@ -159,17 +178,17 @@ function EventCard({
           alt={event.title}
           referrerPolicy="no-referrer"
           onError={(e) => { e.currentTarget.src = FALLBACK; }}
-          className="w-full h-56 object-cover rounded-t-2xl"
+          className="w-full h-48 sm:h-56 object-cover rounded-t-2xl"
         />
       </button>
 
       {/* Card body */}
-      <div className="p-4 flex flex-col flex-1">
-        <h3 className="text-gray-900 font-bold text-lg text-center leading-snug mb-2">
+      <div className="p-3 sm:p-4 flex flex-col flex-1">
+        <h3 className="text-gray-900 font-bold text-sm sm:text-base md:text-lg text-center leading-snug mb-2">
           {event.title}
         </h3>
-        <p className="text-gray-500 text-sm text-center mb-2">{event.date}</p>
-        <p className="text-gray-500 text-sm text-center leading-relaxed line-clamp-3 mb-4 flex-1">
+        <p className="text-gray-500 text-xs sm:text-sm text-center mb-2">{event.date}</p>
+        <p className="text-gray-500 text-xs sm:text-sm text-center leading-relaxed line-clamp-3 mb-4 flex-1">
           {event.description}
         </p>
 
@@ -199,10 +218,15 @@ function EventCard({
 
 export default function EventsSection({ events }: EventsSectionProps) {
   const source = events?.length ? events : ALL_EVENTS;
+  const cardsPerPage = useCardsPerPage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [modal, setModal] = useState<ModalState | null>(null);
 
-  const maxIndex = Math.max(0, source.length - CARDS_PER_PAGE);
+  const maxIndex = Math.max(0, source.length - cardsPerPage);
+
+  useEffect(() => {
+    setCurrentIndex((i) => Math.min(i, maxIndex));
+  }, [maxIndex]);
 
   const prev = () => setCurrentIndex((i) => Math.max(0, i - 1));
   const next = () => setCurrentIndex((i) => Math.min(maxIndex, i + 1));
@@ -218,7 +242,7 @@ export default function EventsSection({ events }: EventsSectionProps) {
     : [];
 
   return (
-    <section className="bg-black py-16 px-4 relative">
+    <section className="bg-black py-12 sm:py-16 px-4 relative">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
@@ -227,7 +251,7 @@ export default function EventsSection({ events }: EventsSectionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
-          className="text-white font-bold text-4xl text-center mb-8"
+          className="text-white font-bold text-2xl sm:text-3xl md:text-4xl text-center mb-6 sm:mb-8"
         >
           Events Where You Can Find Us
         </motion.h2>
@@ -247,13 +271,13 @@ export default function EventsSection({ events }: EventsSectionProps) {
           <div className="overflow-hidden">
             <div
               className="flex gap-5 transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(calc(-${currentIndex} * (100% / ${CARDS_PER_PAGE} + 5px / ${CARDS_PER_PAGE})))` }}
+              style={{ transform: `translateX(calc(-${currentIndex} * (100% / ${cardsPerPage} + 5px / ${cardsPerPage})))` }}
             >
               {source.map((event) => (
                 <div
                   key={event.id}
                   className="flex-shrink-0"
-                  style={{ width: `calc((100% - ${(CARDS_PER_PAGE - 1) * 20}px) / ${CARDS_PER_PAGE})` }}
+                  style={{ width: `calc((100% - ${(cardsPerPage - 1) * 20}px) / ${cardsPerPage})` }}
                 >
                   <EventCard
                     event={event}
