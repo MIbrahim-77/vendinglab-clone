@@ -50,7 +50,7 @@ export default function RoboticCafeVarietySection() {
         Or, as we suggest, have all of them in one cafe for maximum servings outcome in a day.
       </motion.p>
 
-      <div className="max-w-6xl mx-auto flex items-center gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <motion.div
           className="flex-[0_0_45%] flex justify-center"
           initial={{ opacity: 0, x: -40 }}
@@ -68,7 +68,7 @@ export default function RoboticCafeVarietySection() {
         </motion.div>
 
         <motion.div
-          className="flex-[0_0_55%] grid grid-cols-3 gap-4"
+          className="flex-[0_0_55%] grid grid-cols-2 sm:grid-cols-3 gap-4"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

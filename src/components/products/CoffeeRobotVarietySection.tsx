@@ -21,7 +21,7 @@ const TAGS = [
 export default function CoffeeRobotVarietySection() {
   return (
     <section className="bg-gray-100 py-20 px-8">
-      <div className="max-w-6xl mx-auto flex items-center gap-16">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         <motion.div
           initial="hidden"
           whileInView="show"

@@ -53,7 +53,7 @@ function RowCard({ opportunity, index }: { opportunity: RowOpportunity; index: n
       <div className="flex flex-col items-center sm:items-end gap-2 flex-shrink-0">
         <Link
           href={opportunity.href}
-          className={opportunity.buttonStyle}
+          className={`${opportunity.buttonStyle} w-full sm:w-auto text-center`}
         >
           {opportunity.buttonText}
         </Link>

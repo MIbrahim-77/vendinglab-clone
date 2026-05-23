@@ -24,7 +24,7 @@ export default function CoffeeRobotCTASection() {
           variants={fadeInLeft}
           className="w-full lg:w-1/2 flex flex-col items-center lg:items-start"
         >
-          <h2 className="text-4xl font-bold leading-tight mb-6 text-[#2d2d2d]">
+          <h2 className="text-4xl font-bold leading-tight mb-6 text-[#2d2d2d] text-center lg:text-left">
             Your Own Highly Profitable Coffee Robot Business That Is More Than A Barista Robot
           </h2>
 
@@ -48,7 +48,7 @@ export default function CoffeeRobotCTASection() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeInRight}
-          className="w-full lg:w-1/2 relative flex items-center justify-center h-80 lg:h-96"
+          className="w-full lg:w-1/2 relative flex items-center justify-center h-60 sm:h-80 lg:h-96"
         >
           {/* Blur/secondary image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -56,7 +56,7 @@ export default function CoffeeRobotCTASection() {
             src="https://res.cloudinary.com/drqisyk9h/image/upload/q_auto/f_auto/v1779357110/coffee-cup-blur_bp51yg.webp"
             alt="Coffee cup blur"
             referrerPolicy="no-referrer"
-            className="w-48 h-48 object-contain opacity-60 absolute top-0 right-8"
+            className="w-32 sm:w-48 h-32 sm:h-48 object-contain opacity-60 absolute top-0 right-8"
           />
 
           {/* Main image */}
@@ -65,7 +65,7 @@ export default function CoffeeRobotCTASection() {
             src="https://res.cloudinary.com/drqisyk9h/image/upload/q_auto/f_auto/v1779357112/xbot-coffee-cup_m1zzik.webp"
             alt="Xbot Coffee Cup"
             referrerPolicy="no-referrer"
-            className="w-72 h-72 object-contain"
+            className="w-48 sm:w-72 h-48 sm:h-72 object-contain"
           />
         </motion.div>
       </div>

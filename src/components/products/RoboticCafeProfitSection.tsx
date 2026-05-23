@@ -56,7 +56,7 @@ export default function RoboticCafeProfitSection() {
         Average Profitability Calculation
       </motion.h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {COLUMNS.map((col, i) => (
           <motion.div
             key={i}

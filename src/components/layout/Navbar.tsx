@@ -322,7 +322,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="flex-shrink-0 text-white font-bold text-lg tracking-wide"
+            className="flex-shrink-0 text-white font-bold text-lg lg:text-xl tracking-wide"
           >
             <span className="text-yellow-400">VLT</span> Robotics
           </Link>

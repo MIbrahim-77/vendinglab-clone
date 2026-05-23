@@ -172,7 +172,7 @@ export default function InstagramFeed() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-60px' }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"
+          className="grid grid-cols-2 sm:grid-cols-3 gap-3"
         >
           {POSTS.map((post) => (
             <PostCard key={post.id} post={post} />

@@ -32,7 +32,7 @@ export default function RoboticCafeLocationsSlider() {
       </h2>
 
       <div className="relative max-w-5xl mx-auto">
-        <div className="relative h-96 rounded-2xl overflow-hidden">
+        <div className="relative h-56 md:h-96 rounded-2xl overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -60,14 +60,14 @@ export default function RoboticCafeLocationsSlider() {
 
         <button
           onClick={prev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-gray-100 transition"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-gray-100 transition"
         >
           <span className="text-gray-800 font-bold text-xl">‹</span>
         </button>
 
         <button
           onClick={next}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-gray-100 transition"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-gray-100 transition"
         >
           <span className="text-gray-800 font-bold text-xl">›</span>
         </button>

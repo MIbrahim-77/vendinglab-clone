@@ -184,7 +184,7 @@ function EventCard({
 
       {/* Card body */}
       <div className="p-3 sm:p-4 flex flex-col flex-1">
-        <h3 className="text-gray-900 font-bold text-sm sm:text-base md:text-lg text-center leading-snug mb-2">
+        <h3 className="text-gray-900 font-bold text-base sm:text-base md:text-lg text-center leading-snug mb-2">
           {event.title}
         </h3>
         <p className="text-gray-500 text-xs sm:text-sm text-center mb-2">{event.date}</p>

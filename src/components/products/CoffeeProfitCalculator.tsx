@@ -77,14 +77,14 @@ export default function CoffeeProfitCalculator() {
           Estimate your potential earnings with our automated cafe solution.
         </p>
 
-        <div className="flex gap-8 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-8 items-stretch">
           {/* Left: Calculator Card */}
-          <div className="w-[65%] bg-zinc-900 rounded-2xl p-8">
+          <div className="w-full lg:w-[65%] bg-zinc-900 rounded-2xl p-8">
             <h3 className="text-orange-500 font-bold text-xl mb-8">
               Coffee Robot Calculator
             </h3>
 
-            <div className="grid grid-cols-2 gap-x-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
               <InputSlider
                 label="Coffee Cup Price ($)"
                 value={coffeePrice}
@@ -158,7 +158,7 @@ export default function CoffeeProfitCalculator() {
           </div>
 
           {/* Right: Results Card */}
-          <div className="w-[35%] bg-gradient-to-b from-yellow-400 to-amber-500 rounded-2xl p-8 flex flex-col justify-between">
+          <div className="w-full lg:w-[35%] bg-gradient-to-b from-yellow-400 to-amber-500 rounded-2xl p-8 flex flex-col justify-between">
             <div>
               <h3 className="text-[#3d2000] font-bold text-xl mb-4">
                 Projected Monthly Gross Profit

@@ -45,7 +45,7 @@ export default function ManufacturingVideo() {
             variants={fadeUp}
             className="w-full lg:w-2/5"
           >
-            <div className="bg-slate-100 rounded-2xl p-8 h-full flex items-center">
+            <div className="bg-slate-100 rounded-2xl p-4 sm:p-8 h-full flex items-center">
               <p className="text-gray-600 text-base leading-relaxed">
                 Containers like this from all over the world arrive to our Robotics Manufacturing Lab in Dubai, UAE every week. They consist parts and furniture for the most unique robotic cafes Xbot.
               </p>

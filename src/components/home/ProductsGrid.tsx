@@ -65,7 +65,7 @@ function ProductCard({ product, href }: { product: Product; href: string }) {
           alt={product.imageAlt ?? product.title}
           referrerPolicy="no-referrer"
           onError={(e) => { e.currentTarget.src = 'https://picsum.photos/600/400?random=99'; }}
-          className="w-full h-64 object-contain p-4"
+          className="w-full h-48 sm:h-64 object-contain p-4"
         />
       </div>
 
@@ -121,7 +121,7 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-60px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {items.map((product) => (
             <ProductCard

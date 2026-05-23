@@ -36,7 +36,7 @@ export default function RoboticCafeBestSection() {
       <div className="absolute inset-0 bg-black/40" />
 
       <motion.div
-        className="relative max-w-5xl mx-auto bg-[rgba(40,25,10,0.88)] rounded-2xl py-10 px-12 backdrop-blur-sm"
+        className="relative max-w-5xl mx-auto bg-[rgba(40,25,10,0.88)] rounded-2xl p-6 md:px-12 md:py-10 backdrop-blur-sm"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -46,7 +46,7 @@ export default function RoboticCafeBestSection() {
           CafeXbot Is Probably The Best Robotic Cafe On The Planet!
         </h2>
 
-        <div className="grid grid-cols-2 gap-x-16 gap-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
           <div className="flex flex-col gap-6">
             {LEFT_FEATURES.map((f, i) => (
               <div key={i} className="flex items-center gap-4">

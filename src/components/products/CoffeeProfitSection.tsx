@@ -29,14 +29,14 @@ export default function CoffeeProfitSection() {
 
   return (
     <section className="relative bg-slate-200 py-16 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex items-center gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Left: Profit Calculation Table */}
         <motion.div
           initial={{ x: -40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="w-[55%]"
+          className="w-full lg:w-[55%]"
         >
           <h3 className="font-semibold text-lg text-gray-700 mb-6 border-l-4 border-gray-500 pl-3">
             Robotic Coffee Cup Profit Calculation
@@ -91,7 +91,7 @@ export default function CoffeeProfitSection() {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="w-[45%] relative flex justify-center items-center"
+          className="hidden sm:flex w-full sm:w-[45%] relative justify-center items-center"
         >
           <img
             src={BIG_CUP_URL}

@@ -47,7 +47,7 @@ export default function RoboticCafeWhySection() {
           Why CafeXbot Robot Cafe?
         </motion.h2>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-3 items-center gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
           <motion.div
             variants={containerVariants}
             initial="hidden"

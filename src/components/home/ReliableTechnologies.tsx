@@ -82,7 +82,7 @@ export default function ReliableTechnologies() {
           {/* Right — dual images in one container */}
           <motion.div
             variants={fadeUp}
-            className="rounded-2xl overflow-hidden shadow-lg flex h-80"
+            className="rounded-2xl overflow-hidden shadow-lg flex flex-col sm:flex-row h-auto sm:h-80"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -90,7 +90,7 @@ export default function ReliableTechnologies() {
               alt="Ice Alice - Previous robotic cafe model by VLT Robotics"
               referrerPolicy="no-referrer"
               onError={(e) => { e.currentTarget.src = 'https://picsum.photos/600/400?random=5'; }}
-              className="w-1/2 h-full object-cover"
+              className="w-full sm:w-1/2 h-40 sm:h-full object-cover"
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -98,7 +98,7 @@ export default function ReliableTechnologies() {
               alt="CafeXbot - New robotic cafe model by VLT Robotics"
               referrerPolicy="no-referrer"
               onError={(e) => { e.currentTarget.src = 'https://picsum.photos/600/400?random=6'; }}
-              className="w-1/2 h-full object-cover"
+              className="w-full sm:w-1/2 h-40 sm:h-full object-cover"
             />
           </motion.div>
         </motion.div>
@@ -116,11 +116,11 @@ export default function ReliableTechnologies() {
             Manufacturing Unique Robotic Cafes
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {FEATURES.map(({ label, Icon }) => (
               <div
                 key={label}
-                className="flex items-center gap-4 rounded-2xl py-5 px-6 border"
+                className="flex items-center gap-4 rounded-2xl py-5 px-6 border w-full"
                 style={{
                   backgroundColor: '#4a3b30',
                   borderColor: 'rgba(255,255,255,0.2)',

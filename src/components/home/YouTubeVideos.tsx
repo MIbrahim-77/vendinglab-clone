@@ -107,7 +107,7 @@ export default function YouTubeVideos() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-60px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
         >
           {VIDEOS.map((video) => (
             <VideoCard

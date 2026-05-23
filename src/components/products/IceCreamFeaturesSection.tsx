@@ -50,7 +50,7 @@ export default function IceCreamFeaturesSection() {
           How CafeXbot&apos;s Ice Cream Bot Makes Money For You
         </motion.h2>
 
-        <div className="grid grid-cols-3 items-center gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
           {/* Left Column */}
           <motion.div
             initial="hidden"
@@ -60,7 +60,7 @@ export default function IceCreamFeaturesSection() {
             className="flex flex-col justify-center"
           >
             {leftFeatures.map((feature, i) => (
-              <div key={i} className="flex items-start justify-end gap-3 mb-10 last:mb-0">
+              <div key={i} className="flex items-start lg:justify-end gap-3 mb-10 last:mb-0">
                 <p className="text-[#2d2d2d] text-base font-medium text-right">{feature}</p>
                 <span className="w-2 h-2 rounded-full bg-gray-400 flex-shrink-0 mt-2" />
               </div>

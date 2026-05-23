@@ -31,7 +31,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 lg:px-8 pt-20">
         <motion.div
           variants={container}
           initial="hidden"
@@ -40,7 +40,7 @@ export default function HeroSection() {
         >
           <motion.h1
             variants={fadeUp}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight"
+            className="text-3xl lg:text-5xl font-bold text-white leading-tight tracking-tight"
           >
             Leading Robotics Manufacturer for F&B Industry In UAE
           </motion.h1>

@@ -45,7 +45,7 @@ export default function CoffeeRobotFeaturesSection() {
           How CafeXbot Barista Robot Makes Money For You, Beyond Just Being A Coffee Robot
         </motion.h2>
 
-        <div className="grid grid-cols-3 items-center gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
           {/* Left Column */}
           <motion.div
             initial="hidden"
@@ -55,8 +55,8 @@ export default function CoffeeRobotFeaturesSection() {
             className="flex flex-col justify-center"
           >
             {leftFeatures.map((feature, i) => (
-              <div key={i} className="flex items-center justify-end gap-3 mb-10 last:mb-0">
-                <p className="text-[#f97316] text-base font-medium text-right">{feature}</p>
+              <div key={i} className="flex items-center lg:justify-end gap-3 mb-10 last:mb-0">
+                <p className="text-[#f97316] text-base font-medium lg:text-right">{feature}</p>
                 <span className="text-[#f97316] text-lg leading-none">●</span>
               </div>
             ))}
