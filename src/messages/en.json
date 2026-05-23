@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "models": "Robotic Cafe Models",
+    "models_coffee": "Coffee Robot",
+    "models_icecream": "Ice Cream Robot",
+    "models_cafexbot": "Robotic Cafe - CafeXbot",
+    "business": "Business Opportunities",
+    "business_investment": "Investment Opportunities",
+    "business_passive": "Passive Income Opportunities",
+    "rental": "Robot Rental",
+    "about": "About Us",
+    "about_locations": "Our Existing Locations",
+    "about_us": "About Us",
+    "articles": "Articles"
+  },
+  "hero": {
+    "title": "Leading Robotics Manufacturer for F&B Industry In UAE",
+    "subtitle": "Manufacturing since 2015 VLT Robotics is one of the oldest robotic cafe manufacturer in the world.",
+    "secondary": "In 2023 new model CafeXbot has been shown to the world over a numerous launches in events in Dubai, UAE.",
+    "cta_primary": "Explore Products",
+    "cta_secondary": "Learn More",
+    "stat": "10 countries distributorships signed in first 6 months"
+  },
+  "products": {
+    "section_title": "Our Latest Innovations as a Robotic Cafe Manufacturer",
+    "section_stat": "10 countries distributorships signed in first 6 months of production since March 2023",
+    "learn_more": "Learn More"
+  },
+  "events": {
+    "section_label": "Events",
+    "section_title": "Events Where You Can Find Us",
+    "gallery": "Gallery",
+    "video": "Video",
+    "no_video": "No video available"
+  },
+  "business": {
+    "section_label": "Business",
+    "section_title": "Business Opportunities with VLT Robotics",
+    "learn_more": "Learn More",
+    "coming_soon": "Coming Soon",
+    "card1_title": "Investment Opportunities",
+    "card1_desc": "Purchase CafeXbot to place it in a busy location. Enjoy more than 100% ROI operating automatically.",
+    "card2_title": "Passive Income Opportunities",
+    "card2_desc": "Get your own CafeXbot and let us operate it for you in a chosen location. Currently available in Dubai and Singapore.",
+    "card3_title": "Distributorship",
+    "card3_desc": "Purchase minimal quantity and become the exclusive distributor. Sell Xbot to other investors in your area.",
+    "card4_title": "Franchise Opportunities",
+    "card4_desc": "Franchise Xbot and capitalise on our rich F&B expertise. Operate with ease while we take some of the load."
+  },
+  "news": {
+    "section_label": "Press",
+    "section_title": "News Articles About VLT Robotics: Pioneers in Cafe Automation",
+    "read_article": "Read Article"
+  },
+  "footer": {
+    "description": "Robotic Cafe Manufacturer since 2015, Dubai UAE",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "location": "Dubai, UAE",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 VLT Robotic Manufacturing LLC. All rights reserved."
+  }
+}

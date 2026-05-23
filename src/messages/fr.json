@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "models": "Modèles de Café Robotique",
+    "models_coffee": "Robot Café",
+    "models_icecream": "Robot Glace",
+    "models_cafexbot": "Café Robotique - CafeXbot",
+    "business": "Opportunités d'Affaires",
+    "business_investment": "Opportunités d'Investissement",
+    "business_passive": "Opportunités de Revenus Passifs",
+    "rental": "Location de Robot",
+    "about": "À propos",
+    "about_locations": "Nos Emplacements",
+    "about_us": "À propos de nous",
+    "articles": "Articles"
+  },
+  "hero": {
+    "title": "Premier Fabricant de Robotique pour l'Industrie F&B aux EAU",
+    "subtitle": "En fabrication depuis 2015, VLT Robotics est l'un des plus anciens fabricants de cafés robotiques au monde.",
+    "secondary": "En 2023, le nouveau modèle CafeXbot a été présenté au monde lors de nombreux lancements à Dubaï, EAU.",
+    "cta_primary": "Explorer les Produits",
+    "cta_secondary": "En Savoir Plus",
+    "stat": "10 pays ont signé des accords de distribution dans les 6 premiers mois"
+  },
+  "products": {
+    "section_title": "Nos Dernières Innovations en tant que Fabricant de Cafés Robotiques",
+    "section_stat": "10 pays ont signé des accords de distribution dans les 6 premiers mois de production depuis mars 2023",
+    "learn_more": "En Savoir Plus"
+  },
+  "events": {
+    "section_label": "Événements",
+    "section_title": "Événements Où Vous Pouvez Nous Trouver",
+    "gallery": "Galerie",
+    "video": "Vidéo",
+    "no_video": "Aucune vidéo disponible"
+  },
+  "business": {
+    "section_label": "Affaires",
+    "section_title": "Opportunités d'Affaires avec VLT Robotics",
+    "learn_more": "En Savoir Plus",
+    "coming_soon": "Bientôt Disponible",
+    "card1_title": "Opportunités d'Investissement",
+    "card1_desc": "Achetez CafeXbot pour le placer dans un endroit animé. Profitez d'un ROI supérieur à 100% en fonctionnement automatique.",
+    "card2_title": "Opportunités de Revenus Passifs",
+    "card2_desc": "Obtenez votre propre CafeXbot et laissez-nous l'exploiter pour vous dans un emplacement choisi. Disponible à Dubaï et Singapour.",
+    "card3_title": "Distribution",
+    "card3_desc": "Achetez une quantité minimale et devenez le distributeur exclusif. Vendez Xbot à d'autres investisseurs dans votre région.",
+    "card4_title": "Opportunités de Franchise",
+    "card4_desc": "Franchisez Xbot et capitalisez sur notre riche expertise F&B. Opérez facilement pendant que nous prenons une partie de la charge."
+  },
+  "news": {
+    "section_label": "Presse",
+    "section_title": "Articles de Presse sur VLT Robotics : Pionniers de l'Automatisation des Cafés",
+    "read_article": "Lire l'Article"
+  },
+  "footer": {
+    "description": "Fabricant de cafés robotiques depuis 2015, Dubaï EAU",
+    "quickLinks": "Liens Rapides",
+    "contact": "Contact",
+    "location": "Dubaï, EAU",
+    "followUs": "Suivez-nous",
+    "copyright": "© 2025 VLT Robotic Manufacturing LLC. Tous droits réservés."
+  }
+}
