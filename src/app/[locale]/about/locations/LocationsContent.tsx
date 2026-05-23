@@ -7,6 +7,11 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { motion, type Variants } from 'framer-motion';
+import LocationsHeroSection from '@/components/locations/LocationsHeroSection';
+import LocationsBitsPilaniSection from '@/components/locations/LocationsBitsPilaniSection';
+import LocationsAquaventureSection from '@/components/locations/LocationsAquaventureSection';
+import LocationsDubaiMallIceRinkSection from '@/components/locations/LocationsDubaiMallIceRinkSection';
+import LocationsRiverlandSection from '@/components/locations/LocationsRiverlandSection';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -270,7 +275,13 @@ export default function LocationsContent() {
   const comingSoon = LOCATIONS.filter((l) => l.status === 'Coming Soon');
 
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 pb-24">
+    <>
+      <LocationsHeroSection />
+      <LocationsBitsPilaniSection />
+      <LocationsAquaventureSection />
+      <LocationsDubaiMallIceRinkSection />
+      <LocationsRiverlandSection />
+      <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Breadcrumb */}
@@ -372,8 +383,9 @@ export default function LocationsContent() {
               <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
             </svg>
           </Link>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
+         </motion.div>
+       </div>
+     </div>
+    </>
+   );
+ }
