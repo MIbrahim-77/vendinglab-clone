@@ -35,12 +35,11 @@ export default function ExploreCafeXbotModelsSection() {
   return (
     <section style={{ backgroundColor: '#e8e9ed' }} className="py-16 px-8">
       <motion.div
-        className="max-w-5xl mx-auto"
+        className="max-w-5xl mx-auto px-6 md:px-12"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="px-6 md:px-12"
         style={{
           backgroundColor: '#ffffff',
           borderRadius: '20px',
