@@ -9,7 +9,7 @@ export default function IceCreamRobotHeroSection() {
 
   return (
     <section style={{ backgroundColor: '#eeeceb' }} className="py-16 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         <motion.div
           className="flex-1 flex items-center justify-center"
           initial={{ opacity: 0, x: -30 }}
@@ -22,7 +22,8 @@ export default function IceCreamRobotHeroSection() {
             alt="CafeXbot Ice Cream Robot"
             width={420}
             height={420}
-            className="object-contain"
+            className="object-contain w-full max-w-[280px] md:max-w-[420px] h-auto"
+            style={{ width: '100%', height: 'auto', maxWidth: '420px' }}
           />
         </motion.div>
 

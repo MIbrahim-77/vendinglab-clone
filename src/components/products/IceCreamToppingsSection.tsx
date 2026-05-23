@@ -46,30 +46,30 @@ export default function IceCreamToppingsSection() {
           Your CafeXbot Ice cream robot can serve up to 3 selections of toppings
         </p>
 
-        <div className="flex flex-row items-center justify-center gap-6 overflow-x-auto mx-auto [&::-webkit-scrollbar]:hidden px-4">
-          {toppings.map((item) => (
-            <div key={item.label} className="flex flex-col items-center gap-3">
-              <div
-                className="w-44 h-44 rounded-full flex items-center justify-center overflow-hidden"
-                style={{
-                  background: 'radial-gradient(circle, #2a2a2a 0%, #1a1a1a 100%)',
-                  border: '2px solid #333',
-                }}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.label}
-                  width={110}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <span className="text-white font-semibold text-sm text-center max-w-[120px] leading-snug">
-                {item.label}
-              </span>
-            </div>
-          ))}
-        </div>
+         <div className="flex flex-wrap flex-row items-center justify-center gap-4 md:gap-6 mx-auto px-4">
+           {toppings.map((item) => (
+             <div key={item.label} className="flex flex-col items-center gap-3">
+               <div
+                 className="w-28 h-28 md:w-44 md:h-44 rounded-full flex items-center justify-center overflow-hidden"
+                 style={{
+                   background: 'radial-gradient(circle, #2a2a2a 0%, #1a1a1a 100%)',
+                   border: '2px solid #333',
+                 }}
+               >
+                 <Image
+                   src={item.src}
+                   alt={item.label}
+                   width={110}
+                   height={110}
+                   className="object-contain w-16 h-16 md:w-auto md:h-auto"
+                 />
+               </div>
+               <span className="text-white font-semibold text-sm text-center max-w-[120px] leading-snug">
+                 {item.label}
+               </span>
+             </div>
+           ))}
+         </div>
       </motion.div>
     </section>
   )

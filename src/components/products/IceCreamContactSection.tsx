@@ -9,11 +9,11 @@ export default function IceCreamContactSection() {
 
   return (
     <section className="bg-slate-200 py-16 px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-row items-center justify-between gap-8">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <motion.div
-          className="flex-1 max-w-lg"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-1 max-w-lg text-center md:text-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -21,7 +21,7 @@ export default function IceCreamContactSection() {
             Contact us and start earning in few months!
           </h2>
 
-          <p className="text-gray-600 text-base leading-relaxed max-w-sm mb-8">
+          <p className="text-gray-600 text-base leading-relaxed max-w-sm mx-auto md:mx-0 mb-8">
             Existing ones are already making thousands daily for their owners. Check our Passive
             Income Opportunities if you want us to find a location and operate it for you.
           </p>
@@ -36,13 +36,13 @@ export default function IceCreamContactSection() {
 
         <motion.div
           className="flex items-center justify-center"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <div
-            className="w-80 h-80 md:w-96 md:h-96 rounded-full flex items-center justify-center overflow-hidden relative"
+            className="w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full flex items-center justify-center overflow-hidden relative"
             style={{
               background: 'radial-gradient(circle, #c9a06a 0%, #b8864a 60%, #a07040 100%)',
             }}
@@ -52,8 +52,8 @@ export default function IceCreamContactSection() {
               alt="CafeXbot Ice Cream Robot"
               width={380}
               height={420}
-              className="object-contain"
-              style={{ marginTop: '-20px' }}
+              className="object-contain w-full max-w-[200px] md:max-w-[320px] h-auto"
+              style={{ marginTop: '-10px', width: '100%', height: 'auto' }}
             />
           </div>
         </motion.div>

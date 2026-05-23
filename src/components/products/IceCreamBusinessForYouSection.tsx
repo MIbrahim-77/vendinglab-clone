@@ -24,14 +24,15 @@ export default function IceCreamBusinessForYouSection() {
           Robotic Ice Cream Kiosk Business Is For You If
         </h2>
 
-        <div className="max-w-6xl mx-auto flex flex-row items-center justify-center gap-12">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
           <div className="flex items-end justify-center flex-1">
             <Image
               src="https://res.cloudinary.com/drqisyk9h/image/upload/q_auto/f_auto/v1779357164/Business-Girl_rqlc46.webp"
               alt="Business Woman with Laptop"
               width={380}
               height={480}
-              className="object-contain object-bottom"
+              className="object-contain object-bottom w-full max-w-[280px] md:max-w-[380px] h-auto"
+              style={{ width: '100%', height: 'auto', maxWidth: '380px' }}
             />
           </div>
 

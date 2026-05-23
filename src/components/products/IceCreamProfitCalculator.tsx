@@ -70,21 +70,21 @@ export default function IceCreamProfitCalculator() {
   return (
     <section className="bg-black py-20 px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl font-bold text-white text-center mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
           Monthly CafeXbot Ice Cream Robot Profit Calculator
         </h2>
         <p className="text-gray-400 text-base text-center mb-12">
           Estimate your potential earnings with our automated ice cream solution.
         </p>
 
-        <div className="flex gap-8 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-8 items-stretch">
           {/* Left: Calculator Card */}
-          <div className="w-[65%] bg-zinc-900 rounded-2xl p-8">
+          <div className="w-full lg:w-[65%] bg-zinc-900 rounded-2xl p-6 md:p-8">
             <h3 className="text-orange-500 font-bold text-xl mb-8">
               Ice Cream Robot Calculator
             </h3>
 
-            <div className="grid grid-cols-2 gap-x-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
               <InputSlider
                 label="Soft Serve Price ($)"
                 value={softServePrice}
@@ -158,7 +158,7 @@ export default function IceCreamProfitCalculator() {
           </div>
 
           {/* Right: Results Card */}
-          <div className="w-[35%] bg-gradient-to-b from-yellow-400 to-amber-500 rounded-2xl p-8 flex flex-col justify-between">
+          <div className="w-full lg:w-[35%] bg-gradient-to-b from-yellow-400 to-amber-500 rounded-2xl p-6 md:p-8 flex flex-col justify-between">
             <div>
               <h3 className="text-[#3d2000] font-bold text-xl mb-4">
                 Projected Monthly Gross Profit
