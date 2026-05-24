@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import InvestmentOpportunitiesHeroSection from '@/components/business/InvestmentOpportunitiesHeroSection';
 import MultiproductRoboticCafeSection from '@/components/business/MultiproductRoboticCafeSection';
-import HowBusinessOpportunitiesWorkSection from '@/components/business/HowBusinessOpportunitiesWorkSection';
+import BusinessOpportunitiesHowSection from '@/components/business/BusinessOpportunitiesHowSection';
 import EarnWithCafeXbotSection from '@/components/business/EarnWithCafeXbotSection';
 import WherePlaceCafeSection from '@/components/business/WherePlaceCafeSection';
 import MonitorRoboticCafesSection from '@/components/business/MonitorRoboticCafesSection';
@@ -28,7 +28,7 @@ export default async function InvestmentPage({
     <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 pb-24">
       <InvestmentOpportunitiesHeroSection />
       <MultiproductRoboticCafeSection />
-      <HowBusinessOpportunitiesWorkSection />
+      <BusinessOpportunitiesHowSection />
       <EarnWithCafeXbotSection />
       <WherePlaceCafeSection />
       <MonitorRoboticCafesSection />
