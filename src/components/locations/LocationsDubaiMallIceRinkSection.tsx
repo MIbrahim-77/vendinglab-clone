@@ -75,15 +75,10 @@ export default function LocationsDubaiMallIceRinkSection() {
   return (
     <section
       style={{ backgroundColor: '#ffffff' }}
-      className="py-16 px-8"
+      className="py-10 lg:py-16 px-5 lg:px-8"
     >
       <div
-        className="max-w-6xl mx-auto"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '64px',
-        }}
+        className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
       >
         <motion.div
           style={{ flex: 1 }}
@@ -96,7 +91,7 @@ export default function LocationsDubaiMallIceRinkSection() {
             style={{
               color: '#1a1a1a',
               fontWeight: 800,
-              fontSize: '28px',
+              fontSize: 'clamp(22px, 3.5vw, 28px)',
               marginBottom: '28px',
               lineHeight: 1.3,
             }}
@@ -179,7 +174,7 @@ export default function LocationsDubaiMallIceRinkSection() {
               referrerPolicy="no-referrer"
               style={{
                 width: '100%',
-                height: '420px',
+                height: 'clamp(240px, 50vw, 420px)',
                 objectFit: 'cover',
                 borderRadius: '16px',
                 display: 'block',

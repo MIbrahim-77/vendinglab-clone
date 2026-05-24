@@ -11,7 +11,9 @@ import LocationsHeroSection from '@/components/locations/LocationsHeroSection';
 import LocationsBitsPilaniSection from '@/components/locations/LocationsBitsPilaniSection';
 import LocationsAquaventureSection from '@/components/locations/LocationsAquaventureSection';
 import LocationsDubaiMallIceRinkSection from '@/components/locations/LocationsDubaiMallIceRinkSection';
+import LocationsKidzaniaSection from '@/components/locations/LocationsKidzaniaSection';
 import LocationsRiverlandSection from '@/components/locations/LocationsRiverlandSection';
+import DubaiFrameLocationSection from '@/components/about/DubaiFrameLocationSection';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -280,7 +282,9 @@ export default function LocationsContent() {
       <LocationsBitsPilaniSection />
       <LocationsAquaventureSection />
       <LocationsDubaiMallIceRinkSection />
+      <LocationsKidzaniaSection />
       <LocationsRiverlandSection />
+      <DubaiFrameLocationSection />
       <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

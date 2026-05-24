@@ -7,7 +7,7 @@ import {
   type ProductsData,
   type EventsData,
 } from '@/lib/queries/home';
-import HeroSection from '@/components/home/HeroSection';
+import VideoHeroSection from '@/components/home/VideoHeroSection';
 import ProductsGrid, { type Product } from '@/components/home/ProductsGrid';
 import ReliableTechnologies from '@/components/home/ReliableTechnologies';
 import EventsSection, { type EventItem } from '@/components/home/EventsSection';
@@ -222,7 +222,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <HeroSection />
+      <VideoHeroSection />
       <ProductsGrid products={products} />
       <ReliableTechnologies />
       <EventsSection events={events} />

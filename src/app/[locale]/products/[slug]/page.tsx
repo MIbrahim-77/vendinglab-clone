@@ -11,6 +11,9 @@ import {
   type ProductBySlugData,
   type ProductDetail,
 } from '@/lib/queries/products';
+import CoffeeRobotVideoHeroSection from '@/components/products/CoffeeRobotVideoHeroSection';
+import IceCreamRobotVideoHeroSection from '@/components/products/IceCreamRobotVideoHeroSection';
+import RoboticCafeVideoHeroSection from '@/components/products/RoboticCafeVideoHeroSection';
 import CoffeeRobotCTASection from '@/components/products/CoffeeRobotCTASection';
 import CoffeeRobotFeaturesSection from '@/components/products/CoffeeRobotFeaturesSection';
 import CoffeeRobotVarietySection from '@/components/products/CoffeeRobotVarietySection';
@@ -340,7 +343,17 @@ export default async function ProductDetailPage({
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen">
 
+      {/* ── Coffee Robot Video Hero ── */}
+      {slug === 'coffee-robot' && <CoffeeRobotVideoHeroSection />}
+
+      {/* ── Ice Cream Robot Video Hero ── */}
+      {slug === 'ice-cream-robot' && <IceCreamRobotVideoHeroSection />}
+
+      {/* ── Robotic Cafe Video Hero ── */}
+      {slug === 'cafexbot' && <RoboticCafeVideoHeroSection />}
+
       {/* ── Hero ── */}
+      {slug !== 'coffee-robot' && slug !== 'ice-cream-robot' && slug !== 'cafexbot' && (
       <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
         <Image
           src={imageUrl}
@@ -374,6 +387,7 @@ export default async function ProductDetailPage({
           )}
         </div>
       </section>
+      )}
 
       {/* ── Robotic Cafe CTA Section ── */}
       {slug === 'cafexbot' && <RoboticCafeCTASection />}

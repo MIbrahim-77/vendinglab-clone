@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import InquiryForm from './InquiryForm';
-import RobotRentalHeroSection from '@/components/rental/RobotRentalHeroSection';
+import RobotRentalVideoHeroSection from '@/components/rental/RobotRentalVideoHeroSection';
 import RobotRentalIntroSection from '@/components/rental/RobotRentalIntroSection';
 import RobotRentalManufacturedBanner from '@/components/rental/RobotRentalManufacturedBanner';
 import RobotRentalModelsSection from '@/components/rental/RobotRentalModelsSection';
@@ -65,7 +65,7 @@ const FEATURES = [
 export default function RobotRentalPage() {
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen">
-      <RobotRentalHeroSection />
+      <RobotRentalVideoHeroSection />
       <RobotRentalIntroSection />
       <RobotRentalManufacturedBanner />
       <RobotRentalModelsSection />

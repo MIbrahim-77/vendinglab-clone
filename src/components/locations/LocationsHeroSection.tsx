@@ -7,7 +7,7 @@ export default function LocationsHeroSection() {
       style={{
         position: 'relative',
         width: '100%',
-        minHeight: '380px',
+        minHeight: 'clamp(280px, 50vw, 380px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -31,7 +31,7 @@ export default function LocationsHeroSection() {
           position: 'relative',
           zIndex: 2,
           textAlign: 'center',
-          padding: '80px 24px',
+          padding: 'clamp(40px, 10vw, 80px) 24px',
         }}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function LocationsHeroSection() {
           style={{
             color: '#ffffff',
             fontWeight: 700,
-            fontSize: '52px',
+            fontSize: 'clamp(28px, 6vw, 52px)',
             lineHeight: 1.2,
             textShadow: '0 2px 12px rgba(0,0,0,0.4)',
           }}
