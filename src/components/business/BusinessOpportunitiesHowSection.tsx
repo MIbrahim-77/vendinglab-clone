@@ -44,11 +44,12 @@ export default function BusinessOpportunitiesHowSection() {
             display: 'flex',
             alignItems: 'flex-start',
             gap: '48px',
+            flexWrap: 'wrap',
           }}
         >
           {/* LEFT: List */}
           <motion.div
-            style={{ flex: '1.2' }}
+            style={{ flex: '1.2', minWidth: '280px' }}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -83,11 +84,11 @@ export default function BusinessOpportunitiesHowSection() {
                 </span>
                 {/* Text */}
                 <span
+                  className="whitespace-normal sm:whitespace-nowrap"
                   style={{
                     color: '#f5a623',
                     fontWeight: 700,
                     fontSize: '16px',
-                    whiteSpace: 'nowrap',
                   }}
                 >
                   {item}
@@ -98,7 +99,7 @@ export default function BusinessOpportunitiesHowSection() {
 
           {/* RIGHT: Image */}
           <motion.div
-            style={{ flex: 1 }}
+            style={{ flex: 1, minWidth: '280px' }}
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
